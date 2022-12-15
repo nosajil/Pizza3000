@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+html{
+  background-image: url(../components/img/page-validation.webp) ;
+  background-size:cover;
+  height: 100%;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+// 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.detail{
+  background-color: white;
+  h1{
+    
+    font-size : 0.5rem;
+  }
+
+  .btn{
+    display: flex;
+    justify-content: space-around;
+    
+    background-color: grey;
+    &-un{
+      background-color: red;
+    }
+
+    &-deux{
+      background-color: green;
+    }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Acceuil
+.acceuil {
+
+  .title {
+    padding: 0rem;
+    margin: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    background-color:rgba(237, 230, 227,0.9);
   }
-  to {
-    transform: rotate(360deg);
+
+  .btn {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+   
+
+    
+
+
+    .new_commande {
+      margin: 1rem;
+      background-color:rgba(0, 105, 148,0.9);
+
+      width: 15rem;
+      margin: 1rem;
+
+      border: 0.1rem solid white ;
+      border-radius: 0.5rem;
+
+      &-lien{
+        text-align: center;
+        color: white;
+        text-decoration: none;
+      }
+
+      h1 {
+        
+        font-size: 1rem;
+
+      }
+
+      hr {
+        width: 80%;
+        background-color: white ;
+      }
+   
+    }
+
+    .processing_commande {
+      margin: 1rem;
+      background-color:rgb(145, 29, 0,0.9);
+
+      width: 15rem;
+      margin: 1rem;
+
+      border: 0.1rem solid white ;
+      border-radius: 0.5rem;
+      
+
+      &-lien{
+        text-align: center;
+        color: white;
+        text-decoration: none;
+      }
+
+      h1 {
+        font-size: 1rem;
+      }
+
+      hr {
+        width: 80%;
+        background-color: white ;
+      }
+      
+    }
+
+    .payment_commande {
+     
+      background-color: rgba(0, 145, 48,0.9);
+      
+      width: 15rem;
+      margin: 1rem;
+
+
+
+      border: 0.1rem solid white ;
+      border-radius: 0.5rem;
+      
+
+      &-lien{
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        
+
+        h1 {
+          font-size: 1rem;
+
+        }
+
+        hr {
+          width: 80%;
+          background-color: white ;
+        }
+
+      }
+      
+    }
   }
+
+
+
+
+  margin : 1rem;
+
+
 }
