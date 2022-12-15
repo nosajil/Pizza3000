@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import OrderedPizzas from './components/OrderedPizzas';
 import { Header } from './components/Header';
 
-const App = () => {
+const PizzaList = () => {
 
   // const [pizza, setPizza] = useState("");
 
@@ -67,4 +67,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default PizzaList;

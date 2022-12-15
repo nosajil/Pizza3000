@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: orange;
+  background-image: url(../img/background-pizza.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.App-cart {
+  background-color: #F1F1F1;
+  margin: 10px 20px 10px 0;
+  width: 34vw;
+}
+
+.App-container {
+  display: flex;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #f1f1f1c8;
+  margin: 3vh 15px 0 15px;
+
+  .App-logo {
+  height: 10vh;
 }
 
-.App-link {
-  color: #61dafb;
+  .App-name {
+    font-size: 4rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.pizzas-list {
+  display: flex;
+  width: 70vw;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  
+  
+}
+
+.pizza-wrapper{
+  margin: 10px;
+  // background-color: #F1F1F1;
+  width: 30vw;
+
+  .pizza-img {
+    background-color: #F1F1F1;
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+    text-transform: uppercase;
   }
+
+  img{
+    width: 100%;
+  }
+}
+.pizza-infos {
+    padding: 0 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    background-color: #F1F1F1;
 }
