@@ -5,6 +5,11 @@ import pizzas from './pizzas';
 import React, { useState } from 'react';
 import OrderedPizzas from './components/OrderedPizzas';
 import { Header } from './components/Header';
+import Acceuil from './components/acceuil';
+import Payment from './components/payement';
+import logo from './logo.svg';
+import './sass/App.scss';
+
 
 const App = () => {
 
@@ -65,6 +70,9 @@ const App = () => {
   return (
     renderPizzas()
   )
+    // <Acceuil />
+    // <Payment />
+  
 }
 
 export default App;
