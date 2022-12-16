@@ -1,10 +1,10 @@
 // import logo from './logo.svg';
-import './sass/App.scss' ;
-import Pizza from './components/Pizza';
-import pizzas from './pizzas';
+import '../sass/App.scss' ;
+import Pizza from './Pizza';
+import pizzas from '../pizzas';
 import React, { useState } from 'react';
-import OrderedPizzas from './components/OrderedPizzas';
-import { Header } from './components/Header';
+import OrderedPizzas from './OrderedPizzas';
+import { Header } from './Header';
 
 const PizzaList = () => {
 

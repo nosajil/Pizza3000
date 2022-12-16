@@ -9,8 +9,8 @@ html {
 body {
   font-size: 1.6rem;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: orange;
-  background-image: url(../img/background-pizza.jpg);
+  background-color: transparent;
+  // background-image: url(../components/img/background-pizza.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,7 +78,7 @@ body {
     background-color: #F1F1F1;
 }
 html{
-  background-image: url(../components/img/page-validation.webp) ;
+  background-image: url(../img/page-validation.webp) ;
   background-size:cover;
   height: 100%;
 

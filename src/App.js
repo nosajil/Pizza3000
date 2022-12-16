@@ -6,9 +6,9 @@ import React, { useState } from 'react';
 import OrderedPizzas from './components/OrderedPizzas';
 import { Header } from './components/Header';
 import Acceuil from './components/acceuil';
-import Payment from './components/payement';
-import logo from './logo.svg';
-import './sass/App.scss';
+import { Link } from 'react';
+// import Payment from './components/payement';
+// import logo from './logo.svg';
 
 
 const App = () => {
@@ -68,9 +68,10 @@ const App = () => {
     )
   }
   return (
-    renderPizzas()
+    // renderPizzas()
+    <Acceuil />
   )
-    // <Acceuil />
+    
     // <Payment />
   
 }

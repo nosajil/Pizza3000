@@ -1,9 +1,11 @@
-import { render } from "@testing-library/react"
+// import { render } from "@testing-library/react";
+import { useNavigate } from 'react-router-dom'
+
 
 
 const Acceuil = () => {
 
-
+const navigate = useNavigate()
 
     return (
         <div className="acceuils">
@@ -21,12 +23,13 @@ const Acceuil = () => {
                     <div className="btn">
 
                         <div className="new_commande">
-                            <a href="" onClick="" className="new_commande-lien">
-
-                                 <h1><i class="fa-solid fa-truck-fast"></i>Nouvelle Commande</h1>
-                                <hr />
-                                <p>Créer et enregistrer une nouvelle commande</p>
-                            </a>
+                            {/* <Link to="/pizzas"> */}
+                                <div onClick={() => navigate("/pizzas")} className="new_commade-lien">
+                                    <h1><i class="fa-solid fa-truck-fast"></i>Nouvelle Commande</h1>
+                                    <hr />
+                                    <p>Créer et enregistrer une nouvelle commande</p>
+                                </div>
+                            {/* </Link> */}
                         </div>
 
                         <div className="processing_commande">
