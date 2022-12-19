@@ -2,17 +2,28 @@ import React from 'react'
 import { displayPrice } from '../Helpers'
 
 
-const OrderedPizzas = ({items, total}) => {
+const OrderedPizzas = ({items, itemToAdd, total}) => {
+
+    // const existingCartItem = items.find(item => item.id === itemToAdd.id);
+
+    // if (existingCartItem) {
+    //     return items.map(item => item.id === itemToAdd.id ? {...itemToAdd, quantity: item.quantity + 1}: item
+    //     );
+    // }
+
+
+
 
     const listCartItems = items.map(item => {
         return(
             <li key={item.id}>{item.name} - {displayPrice(item.price)}</li>
-        )
+        )        
     })
+
+
 
   return (
     <div className="orderedPizza-wrapper">
-        <h2>Commande n° CMD</h2>
         <ul>
             {listCartItems}
         </ul>
@@ -20,6 +31,7 @@ const OrderedPizzas = ({items, total}) => {
             Soit un total de: {displayPrice(total)}
         </div>
     </div>
+    // [...items, {...itemToAdd, quantity: 1}]
   )
 }
 

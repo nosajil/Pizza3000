@@ -5,7 +5,6 @@ const Pizza = ({name , price, image, action}) => {
   return (
     <div className="listPizza-wrapper">
         <div onClick={action} className="pizza-wrapper">
-                {/* <Link> */}
                 <div className="pizza-img">
                   <img src={`${process.env.PUBLIC_URL}/img/pizzas/${image}`} alt="" />
                 </div>
@@ -14,7 +13,6 @@ const Pizza = ({name , price, image, action}) => {
                     <h2>{name}</h2>
                     <p>{price}</p>
                 </div>
-                {/* </Link> */}
         </div>
     </div>
   )
