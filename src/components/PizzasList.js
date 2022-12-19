@@ -5,52 +5,62 @@ import pizzas from '../pizzas';
 import React, { useState } from 'react';
 import OrderedPizzas from './OrderedPizzas';
 import { Header } from './Header';
-import { useDispatch } from 'react-redux';
-import { add, complete, remove } from '../slices';
+import { useDispatch, useSelector } from 'react-redux';
+import { add, addPizza, remove } from '../slices';
+import { Button } from 'react';
+import { useParams } from 'react-router-dom';
 
 
 
 
 const PizzaList = () => {
 
-  // const [pizza, setPizza] = useState("");
+  // const [cart, setCart] = useState({
+  //   items: [],
+  //   total: 0,
+  //   numOrder: Date.now(),
+  //   quantity: 1
+  // })
 
-  const [cart, setCart] = useState({
-    items: [],
-    total: 0,
-    numOrder: Date.now(),
-    quantity: 1
-  })
+  const [pizza, setPizza] = useState({});
 
-  // const [pizza, setPizza] = useState({});
+  const allOrders = useSelector(state => state.data.orders);
 
-  // const dispatch = useDispatch;
+  console.log(allOrders);
+
+  const { id } = useParams();
+
+  const selectedOrder = allOrders.find(idToFind => idToFind.id === Number(id));
+
+  console.log(selectedOrder);
+
+
+  const dispatch = useDispatch();
 
   // const addOrder = () => {
-  //   dispatch(add(pizza))
+  //   selectedOrder.dispatch(add())
 
   //   setPizza({});
   // }
+  const addPizzas = () => {
+    dispatch(addPizza())
+
+    setPizza({});
+  }
 
   const addToCart = (item) => {
     // Modification afin d'avoir un id unique lorsque l'on clique plusieurs fois sur le même légume
     const copyItem = {...item};
 
-    // if (copyItem.id === copyItem.id) {
+    // if (copyItem.id === item.id) {
     //   cart.items.push([
     //     ...item,
     //     cart.quantity = 1
-    //   ])
-      
+    //   ])  
     // }
-    copyItem.id = `${copyItem.id}-${Date.now()}`;
     
-
-    setCart({
-      items: [...cart.items, copyItem],
-      total: Math.round((cart.total + item.price)*100)/100,
-      numOrder: cart.numOrder,
-    });
+    // copyItem.id = `${copyItem.id}-${Date.now()}`;
+    
   };
 
   const renderPizzas = () => {
@@ -63,11 +73,15 @@ const PizzaList = () => {
           name={item.name}
           price={item.price}
           // action={()=> addToCart(item)}
-          action={()=> addToCart(item)}
+          action={()=> addPizzas()}
         />
+        
       );
-    });
+    }); 
+    
 
+// useParams
+// find - allOrders
 
 
     return (
@@ -78,15 +92,14 @@ const PizzaList = () => {
             {ListPizzas}
           </div >
           <div className="App-cart">
-          <h2>Commande n° CMD {cart.numOrder}</h2>
+          <h2>Commande n° CMD</h2>
             <OrderedPizzas 
-            items={cart.items}
-            total={cart.total}
+            items={selectedOrder.pizzas}
+            // total={selectedOrder.total}
             />
           </div>
         </div>
       </div>
-      
     )
   }
   return (
@@ -95,3 +108,4 @@ const PizzaList = () => {
 }
 
 export default PizzaList;
+

@@ -4,11 +4,23 @@ import './sass/index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Root from './Root';
+import { configureStore } from '@reduxjs/toolkit';
+import dataReducer from "./slices";
+import { Provider } from 'react-redux';
+
+
+const store = configureStore({
+  reducer: {
+    data: dataReducer
+  }
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Root />
+    <Provider store={store}>
+      <Root />
+    </Provider>
   </React.StrictMode>
 );
 

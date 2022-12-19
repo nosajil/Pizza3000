@@ -19,14 +19,14 @@ export const dataSlice = createSlice({
     reducers: {
         add: (state, { payload }) => {
             state.orders.push({
-                id: Date.now(),
-                pizzas: pizzas.push(payload),
+                id: payload,
+                pizzas: [],
                 complete: false
             })
-        },
+        }
     }
 });
 
-export const { add, complete, remove } = dataSlice.actions;
+export const { add, addPizza, remove, } = dataSlice.actions;
 
 export default dataSlice.reducer;

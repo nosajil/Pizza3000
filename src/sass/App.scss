@@ -38,6 +38,10 @@ body {
   height: 10vh;
 }
 
+  .icon-back {
+    font-size: 4rem;
+  }
+
   .App-name {
     font-size: 4rem;
   }
@@ -149,22 +153,28 @@ html{
       margin: 1rem;
       background-color:rgba(0, 105, 148,0.9);
 
-      width: 15rem;
+      width: 25vw;
+      height: 200px;
       margin: 1rem;
 
       border: 0.1rem solid white ;
       border-radius: 0.5rem;
 
-      &-lien{
+      .new_commade-lien {
         text-align: center;
         color: white;
         text-decoration: none;
+        padding-top: 1rem;
+
+        i {
+          font-size: 4rem;
+          margin-bottom: 1rem;
+        }
       }
 
       h1 {
+        font-size: 2rem;
         
-        font-size: 1rem;
-
       }
 
       hr {
@@ -174,25 +184,35 @@ html{
    
     }
 
+    
+
     .processing_commande {
       margin: 1rem;
       background-color:rgb(145, 29, 0,0.9);
 
-      width: 15rem;
+      width: 25vw;
+      height: 200px;
       margin: 1rem;
 
       border: 0.1rem solid white ;
       border-radius: 0.5rem;
       
 
-      &-lien{
+      .processing_commande-lien{
         text-align: center;
         color: white;
         text-decoration: none;
+        padding-top: 1rem;
+
+        i {
+          font-size: 4rem;
+          margin-bottom: 1rem;
+        }
       }
 
       h1 {
-        font-size: 1rem;
+        font-size: 2rem;
+        
       }
 
       hr {
@@ -206,7 +226,8 @@ html{
      
       background-color: rgba(0, 145, 48,0.9);
       
-      width: 15rem;
+      width: 25vw;
+      height: 200px;
       margin: 1rem;
 
 
@@ -215,16 +236,22 @@ html{
       border-radius: 0.5rem;
       
 
-      &-lien{
+      .payment_commande-lien{
         text-align: center;
         text-decoration: none;
         color: white;
-        
+        padding-top: 1rem;
 
-        h1 {
-          font-size: 1rem;
-
+        i {
+          font-size: 4rem;
+          margin-bottom: 1rem;
         }
+      }
+
+      h1 {
+        font-size: 2rem;
+        
+      }
 
         hr {
           width: 80%;
@@ -235,11 +262,3 @@ html{
       
     }
   }
-
-
-
-
-  margin : 1rem;
-
-
-}
