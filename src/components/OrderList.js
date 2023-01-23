@@ -1,21 +1,19 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import '../sass/OrderList.scss'
 import { Header } from './Header';
 import { displayPrice } from '../Helpers';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { deleteOrder } from '../slices';
+
 
 const OrderList = () => {
 
     const orders = useSelector(state => state.data.orders);
 
-    // const { oid } = useParams();
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
-    // const index = orders.findIndex(order => {
-    //     return order.id === oid;
-    // });
-
-    // const navigate = useNavigate();
 
     const ordersList = orders.map(order => {
         return (
@@ -26,10 +24,20 @@ const OrderList = () => {
                 <td>
                     {!order.paid ? 
                     <div className="btn_wrapper">
-                        <button className='btn-modif'>
-                            <i class="fa-solid fa-pen-to-square"></i>
+                        <button 
+                            className='btn-modif'
+                            onClick={() => {
+                                navigate(`/order/${order.id}`)
+                            }}
+                            >
+                                <i class="fa-solid fa-pen-to-square"></i>
                         </button>
-                        <button className='btn-del'>
+                        <button 
+                        className='btn-del'
+                        onClick={() => {
+                            dispatch(deleteOrder(order))
+                        }}
+                        >
                             <i class="fa-solid fa-trash"></i>
                         </button>
                     </div> : ""}

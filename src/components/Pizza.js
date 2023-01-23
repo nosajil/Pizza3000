@@ -1,6 +1,6 @@
 import React from 'react'
 import '../sass/Pizza.scss'
-// import { Link, Button } from 'react'
+import { displayPrice } from '../Helpers'
 
 const Pizza = ({name , price, image, addToOrder}) => {
   return (
@@ -12,7 +12,7 @@ const Pizza = ({name , price, image, addToOrder}) => {
 
                 <div className="pizza-infos">
                     <h2>{name}</h2>
-                    <p>{price}€</p>
+                    <p>{displayPrice(price)}</p>
                 </div>
         </div>
     </div>

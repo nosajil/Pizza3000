@@ -44,9 +44,26 @@ export const dataSlice = createSlice({
             state.orders[index] = currentOrder;
             localStorage.setItem('orders', JSON.stringify(state.orders));
         },
+        deleteOrder: (state, { payload }) => {
+            // const oid = payload.oid;
+
+            // const index = state.orders.findIndex(order => {
+            //     return order.id === oid;
+            // });
+
+            // const orderToDelete = { ...state.orders[index] };
+
+            // state.orders[index] = orderToDelete;
+            // state.orders.push(orderToDelete);
+            state.todos.splice(payload, 1);
+
+
+
+
+        }
     }
 });
 
-export const { addOrder, addPizzaOrder } = dataSlice.actions;
+export const { addOrder, addPizzaOrder, deleteOrder } = dataSlice.actions;
 
 export default dataSlice.reducer;

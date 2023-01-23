@@ -1,5 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
 import { displayPrice } from '../Helpers'
 import '../sass/Orderedpizzas.scss'
 
@@ -11,7 +10,7 @@ const OrderedPizzas = ({pizzas, orderedPizzas, total, paid = false, setPaid = fa
         return (
             <div className="item_wrapper">
                 <li className='pizza_item' key={key}>
-                    <span>{pizzas[key].name}</span>
+                    <span className='pizza_item_name'>{pizzas[key].name}</span>
                     <span>{displayPrice(totalPizzaPrice)}</span>
                 </li>
                 <p>( {orderedPizzas[key]} x {displayPrice(pizzas[key].price)} )</p>

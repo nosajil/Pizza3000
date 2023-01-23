@@ -2,6 +2,10 @@
     text-transform: capitalize;
     display: flex;
     justify-content: space-between;
+
+    .pizza_item_name {
+        font-weight: 700;
+    }
 }
 
 .ordered_pizza_wrapper {
