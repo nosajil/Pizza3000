@@ -1,0 +1,82 @@
+.container {
+    margin-bottom: 3vh;
+}
+
+.order-list-wrapper {
+  background-color: #f1f1f1c8;
+
+  h3 {
+    padding-left: 20px;
+    padding-top: 20px;
+    font-weight: 900;
+  }
+
+  .order-list-titles {
+    padding-left: 20px;
+
+
+    table {
+        width: 100%;
+
+        th {
+            font-weight: 700;
+            text-align: start;
+        }
+
+        
+    }
+
+    
+  }
+}
+
+.btn_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+
+    .btn-modif, .btn-del {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 90%;
+        }
+
+        i {
+            color: white;
+            font-size: 2rem;
+        }
+    }
+
+    .btn-del {
+        background-color: rgb(221, 57, 57);
+    }
+    .btn-modif {
+        background-color: rgb(84, 84, 227);
+    }
+}
+
+td:last-child, th:last-child {
+    padding-left: 20px;
+}
+
+td {
+    padding: 10px 0;
+}
+
+
+
+.bg-paid {
+    background-color: green;
+}
+
+.bg-unpaid {
+    background-color: orange;
+}
+
+.bg-paid, .bg-unpaid {
+    padding-left: 10px;
+    color: white;
+}

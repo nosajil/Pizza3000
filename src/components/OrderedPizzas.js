@@ -1,37 +1,34 @@
 import React from 'react'
 import { displayPrice } from '../Helpers'
+import '../sass/Orderedpizzas.scss'
 
 
-const OrderedPizzas = ({items, itemToAdd, total}) => {
-
-    // const existingCartItem = items.find(item => item.id === itemToAdd.id);
-
-    // if (existingCartItem) {
-    //     return items.map(item => item.id === itemToAdd.id ? {...itemToAdd, quantity: item.quantity + 1}: item
-    //     );
-    // }
-
-
-
-
-    const listCartItems = items.map(item => {
-        return(
-            <li key={item.id}>{item.name} - {displayPrice(item.price)}</li>
+const OrderedPizzas = ({pizzas, orderedPizzas, total, paid = false, setPaid = false}) => {
+    
+        const listCartItems = Object.keys(orderedPizzas).map(key => {
+            const totalPizzaPrice = Math.round((pizzas[key].price * orderedPizzas[key]) * 10) / 10;
+        return (
+            <div className="item_wrapper">
+                <li className='pizza_item' key={key}>
+                    <span>{pizzas[key].name}</span>
+                    <span>{displayPrice(totalPizzaPrice)}</span>
+                </li>
+                <p>( {orderedPizzas[key]} x {displayPrice(pizzas[key].price)} )</p>
+            </div>
         )        
     })
-
-
+    
 
   return (
-    <div className="orderedPizza-wrapper">
+    <div className="ordered_pizza_wrapper">
         <ul>
             {listCartItems}
         </ul>
         <div className="App-cart-total">
             Soit un total de: {displayPrice(total)}
         </div>
+        {paid ? <button className='order-paid-button' onClick={setPaid}>Encaisser la commande</button> : ""}
     </div>
-    // [...items, {...itemToAdd, quantity: 1}]
   )
 }
 

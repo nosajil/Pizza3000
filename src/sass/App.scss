@@ -4,108 +4,54 @@
 
 html {
   font-size: 62.5%;
+  
 }
 
 body {
   font-size: 1.6rem;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: transparent;
-  // background-image: url(../components/img/background-pizza.jpg);
+  background-image: url(../img/background-pizza.jpg);
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
+  background-position: center center;
+  background-repeat: repeat;
 }
 
-.App-cart {
-  background-color: #F1F1F1;
-  margin: 10px 20px 10px 0;
-  width: 34vw;
-}
-
-.App-container {
-  display: flex;
-}
+// HEADER
 
 .App-header {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f1f1f1c8;
-  margin: 3vh 15px 0 15px;
-
-  .App-logo {
-  height: 10vh;
-}
+  padding: 20px 0;
+  margin: 0 auto;
+  margin-top: 3vh;
 
   .App-name {
     font-size: 4rem;
   }
-}
 
-
-.pizzas-list {
-  display: flex;
-  width: 70vw;
-  flex-wrap: wrap;
-  margin-left: 10px;
-  
-  
-}
-
-.pizza-wrapper{
-  margin: 10px;
-  // background-color: #F1F1F1;
-  width: 30vw;
-
-  .pizza-img {
-    background-color: #F1F1F1;
-  }
-
-  h2 {
-    text-transform: uppercase;
-  }
-
-  img{
-    width: 100%;
-  }
-}
-.pizza-infos {
-    padding: 0 1vw;
+  .title-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: center;    
-    background-color: #F1F1F1;
-}
-html{
-  background-image: url(../img/page-validation.webp) ;
-  background-size:cover;
-  height: 100%;
+    align-items: center;
 
-}
-
-// 
-
-.detail{
-  background-color: white;
-  h1{
-    
-    font-size : 0.5rem;
-  }
-
-  .btn{
-    display: flex;
-    justify-content: space-around;
-    
-    background-color: grey;
-    &-un{
-      background-color: red;
-    }
-
-    &-deux{
-      background-color: green;
+    i {
+      font-size: 4rem;
+      padding-right: 10px;
     }
   }
+
+  #left-arrow {
+    font-size: 4rem;
+    position: absolute;
+    left: 5vw;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 70%;
+    }
+  }
+
 }
 
 
@@ -118,128 +64,3 @@ html{
 
 
 
-
-
-
-
-
-// Acceuil
-.acceuil {
-
-  .title {
-    padding: 0rem;
-    margin: 1.5rem;
-
-    display: flex;
-    justify-content: center;
-    background-color:rgba(237, 230, 227,0.9);
-  }
-
-  .btn {
-
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-   
-
-    
-
-
-    .new_commande {
-      margin: 1rem;
-      background-color:rgba(0, 105, 148,0.9);
-
-      width: 15rem;
-      margin: 1rem;
-
-      border: 0.1rem solid white ;
-      border-radius: 0.5rem;
-
-      &-lien{
-        text-align: center;
-        color: white;
-        text-decoration: none;
-      }
-
-      h1 {
-        
-        font-size: 1rem;
-
-      }
-
-      hr {
-        width: 80%;
-        background-color: white ;
-      }
-   
-    }
-
-    .processing_commande {
-      margin: 1rem;
-      background-color:rgb(145, 29, 0,0.9);
-
-      width: 15rem;
-      margin: 1rem;
-
-      border: 0.1rem solid white ;
-      border-radius: 0.5rem;
-      
-
-      &-lien{
-        text-align: center;
-        color: white;
-        text-decoration: none;
-      }
-
-      h1 {
-        font-size: 1rem;
-      }
-
-      hr {
-        width: 80%;
-        background-color: white ;
-      }
-      
-    }
-
-    .payment_commande {
-     
-      background-color: rgba(0, 145, 48,0.9);
-      
-      width: 15rem;
-      margin: 1rem;
-
-
-
-      border: 0.1rem solid white ;
-      border-radius: 0.5rem;
-      
-
-      &-lien{
-        text-align: center;
-        text-decoration: none;
-        color: white;
-        
-
-        h1 {
-          font-size: 1rem;
-
-        }
-
-        hr {
-          width: 80%;
-          background-color: white ;
-        }
-
-      }
-      
-    }
-  }
-
-
-
-
-  margin : 1rem;
-
-
-}

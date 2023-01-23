@@ -1,17 +1,18 @@
 import React from 'react'
+import '../sass/Pizza.scss'
 // import { Link, Button } from 'react'
 
-const Pizza = ({name , price, image, action}) => {
+const Pizza = ({name , price, image, addToOrder}) => {
   return (
-    <div className="listPizza-wrapper">
-        <div onClick={action} className="pizza-wrapper">
+    <div className="pizza_card">
+        <div onClick={addToOrder}>
                 <div className="pizza-img">
                   <img src={`${process.env.PUBLIC_URL}/img/pizzas/${image}`} alt="" />
                 </div>
 
                 <div className="pizza-infos">
                     <h2>{name}</h2>
-                    <p>{price}</p>
+                    <p>{price}€</p>
                 </div>
         </div>
     </div>

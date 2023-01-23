@@ -1,0 +1,18 @@
+.orders_list {
+    background-color: #F1F1F1;
+    padding-left: 20px;
+    flex-basis: 32%;
+    margin: 3vh 0;
+}
+  
+.pizzalist_container {
+    display: flex;
+}
+
+.pizzas-list {
+    display: flex;
+    flex-basis: 68%;
+    flex-wrap: wrap;
+    margin-bottom: 3vh;
+}
+

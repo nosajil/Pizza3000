@@ -1,0 +1,11 @@
+.pizza_item {
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ordered_pizza_wrapper {
+    ul {
+        padding: 0 10px 0 0;
+    }
+}

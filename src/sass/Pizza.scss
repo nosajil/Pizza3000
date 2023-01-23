@@ -1,0 +1,28 @@
+.pizza_card{
+    flex-basis: 48%;
+    margin: 3vh 1vw 0 0 ;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 95%;
+    }
+  
+    .pizza-img {
+      background-color: #F1F1F1;
+    }
+  
+    h2 {
+      text-transform: uppercase;
+    }
+  
+    img{
+      width: 100%;
+    }
+  }
+  .pizza-infos {
+      padding: 0 1vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;    
+      background-color: #F1F1F1;
+  }
