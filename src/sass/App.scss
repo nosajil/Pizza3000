@@ -27,6 +27,10 @@ body {
   margin: 0 auto;
   margin-top: 3vh;
 
+  .icon-back {
+    font-size: 4rem;
+  }
+
   .App-name {
     font-size: 4rem;
   }
@@ -64,3 +68,146 @@ body {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+// Acceuil
+.acceuil {
+
+  .title {
+    padding: 0rem;
+    margin: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    background-color:rgba(237, 230, 227,0.9);
+  }
+
+  .btn {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+   
+
+    
+
+
+    .new_commande {
+      margin: 1rem;
+      background-color:rgba(0, 105, 148,0.9);
+
+      width: 25vw;
+      height: 200px;
+      margin: 1rem;
+
+      border: 0.1rem solid white ;
+      border-radius: 0.5rem;
+
+      .new_commade-lien {
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        padding-top: 1rem;
+
+        i {
+          font-size: 4rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      h1 {
+        font-size: 2rem;
+        
+      }
+
+      hr {
+        width: 80%;
+        background-color: white ;
+      }
+   
+    }
+
+    
+
+    .processing_commande {
+      margin: 1rem;
+      background-color:rgb(145, 29, 0,0.9);
+
+      width: 25vw;
+      height: 200px;
+      margin: 1rem;
+
+      border: 0.1rem solid white ;
+      border-radius: 0.5rem;
+      
+
+      .processing_commande-lien{
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        padding-top: 1rem;
+
+        i {
+          font-size: 4rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      h1 {
+        font-size: 2rem;
+        
+      }
+
+      hr {
+        width: 80%;
+        background-color: white ;
+      }
+      
+    }
+
+    .payment_commande {
+     
+      background-color: rgba(0, 145, 48,0.9);
+      
+      width: 25vw;
+      height: 200px;
+      margin: 1rem;
+
+
+
+      border: 0.1rem solid white ;
+      border-radius: 0.5rem;
+      
+
+      .payment_commande-lien{
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        padding-top: 1rem;
+
+        i {
+          font-size: 4rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      h1 {
+        font-size: 2rem;
+        
+      }
+
+        hr {
+          width: 80%;
+          background-color: white ;
+        }
+
+      }
+      
+    }
+  }
+>>>>>>> c8c75b3d761a9bf008d4e2f34de840e71f14a777
