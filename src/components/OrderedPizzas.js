@@ -4,7 +4,6 @@ import { displayPrice } from '../Helpers'
 import '../sass/Orderedpizzas.scss'
 
 
-<<<<<<< HEAD
 const OrderedPizzas = ({pizzas, orderedPizzas, total, paid = false, setPaid = false}) => {
     
         const listCartItems = Object.keys(orderedPizzas).map(key => {
@@ -17,15 +16,6 @@ const OrderedPizzas = ({pizzas, orderedPizzas, total, paid = false, setPaid = fa
                 </li>
                 <p>( {orderedPizzas[key]} x {displayPrice(pizzas[key].price)} )</p>
             </div>
-=======
-const OrderedPizzas = ({items, itemToAdd, total}) => {
-
-    
-
-    const listCartItems = items.map(item => {
-        return(
-            <li key={item.id}>{item.name} - {displayPrice(item.price)}</li>
->>>>>>> c8c75b3d761a9bf008d4e2f34de840e71f14a777
         )        
     })
     
